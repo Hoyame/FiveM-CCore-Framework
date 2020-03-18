@@ -28,4 +28,4 @@ Downloading and publishing this resource on Github without using the github Fork
 
 It does not work with esx, it replaces it
 
-# Discord : https://discord.gg/urNfUS
+# Discord : https://discord.gg/vnMGW4E
