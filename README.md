@@ -1,3 +1,5 @@
+# VERSION OBSELETE, FIX EN COURS VEUILLEZ PATIENTER
+
 <p align="center">
 <a href="https://badgen.net/github/release/corazon2/FiveM-CCore"><img src="https://badgen.net/github/release/corazon2/FiveM-CCore" alt="license"></a> 
 <a href="https://badgen.net/github/commits/corazon2/FiveM-CCore"><img src="https://badgen.net/github/commits/corazon2/FiveM-CCore" alt="license"></a> 
