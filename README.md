@@ -1,7 +1,7 @@
 # FiveM-Framework
 A framework that I coded, I would continue to update, I publish it so that it continues to live and that there are contributors who contribute to the project, there is a bunch of dev who have largely the skills to take over, so I'm counting on you :)
 
-# Wiki
+# Wiki :book:
 <p align="center">
   <a href="https://github.com/corazon2/FiveM-CCore/wiki">
 <img width="80%" src="https://i.gyazo.com/9007f2f30c5cb52b4e2a1f799ac5c1c1.png">
