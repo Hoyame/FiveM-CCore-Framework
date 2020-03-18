@@ -27,3 +27,5 @@ You have to fork the project, once done, you create a branch and you add what yo
 Downloading and publishing this resource on Github without using the github Fork option is not allowed and may result in a suspension of the repository. I invite you to respect my work and that of collaborators. 
 
 It does not work with esx, it replaces it
+
+# Discord : https://discord.gg/22jphT9
