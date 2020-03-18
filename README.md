@@ -1,6 +1,7 @@
 ![version-stable](https://badgen.net/github/release/corazon2/FiveM-CCore)
 ![commit-stable](https://badgen.net/github/commits/corazon2/FiveM-CCore)
 ![lastcommit-stable](https://badgen.net/github/last-commit/corazon2/FiveM-CCore)
+![lastversion-stable](https://badgen.net/github/releases/micromatch/micromatch)
 
 [![HitCount](http://hits.dwyl.com/corazon2/FiveM-CCore.svg)](http://hits.dwyl.com/corazon2/FiveM-CCore)
 
