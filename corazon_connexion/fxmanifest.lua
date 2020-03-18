@@ -11,7 +11,6 @@ client_scripts {
 	'@corazon_core/core/cl_skinchanger.lua',
 	'@corazon_core/core/cl_players.lua',
 	'@corazon_core/core/cl_game.lua'
-	
 }
 
 server_scripts {
