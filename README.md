@@ -1,4 +1,4 @@
-# VERSION OBSELETE, FIX EN COURS VEUILLEZ PATIENTER
+# OBSELETE VERSION, FIX IN PROGRESS PLEASE WAIT
 
 <p align="center">
 <a href="https://badgen.net/github/release/corazon2/FiveM-CCore"><img src="https://badgen.net/github/release/corazon2/FiveM-CCore" alt="license"></a> 
