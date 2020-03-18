@@ -21,9 +21,9 @@ server_scripts {
 }
 
 client_scripts {
-	'game/cl_connection.lua'
+	'connexion/cl_connection.lua'
 }
 
 server_scripts {
-	'game/sv_connection.lua'
+	'connexion/sv_connection.lua'
 }
