@@ -31,6 +31,6 @@ Downloading and publishing this resource on Github without using the github Fork
 
 It does not work with esx, it replaces it
 # Credits
-[Media Previews](https://github.com/eR0oT) eR0oT
+- [Media Previews] [eR0ot](https://github.com/eR0oT)
 
 # Discord : https://discord.gg/22jphT9
