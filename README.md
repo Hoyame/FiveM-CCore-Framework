@@ -1,3 +1,6 @@
+![packagist-stable](https://badgen.net/packagist/v/corazon2/FiveM-CCore)
+
+
 [![HitCount](http://hits.dwyl.com/corazon2/FiveM-CCore.svg)](http://hits.dwyl.com/corazon2/FiveM-CCore)
 
 
