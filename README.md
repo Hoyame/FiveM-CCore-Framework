@@ -1,7 +1,7 @@
 [![HitCount](http://hits.dwyl.com/corazon2/FiveM-CCore.svg)](http://hits.dwyl.com/corazon2/FiveM-CCore)
 
 
-# ⛏ FiveM-Framework
+# ⛏ FiveM CCore [Corazon Core]
 A framework that I coded, I would continue to update, I publish it so that it continues to live and that there are contributors who contribute to the project, there is a bunch of dev who have largely the skills to take over, so I'm counting on you :)
 
 # :book: Wiki 
