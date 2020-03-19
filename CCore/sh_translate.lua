@@ -1,3 +1,5 @@
+-- Translations made by: Sayain#0978
+
 Langues['english'] = {
   ['choice_perso'] = "Choice of character",
   ['character'] = "Character",
