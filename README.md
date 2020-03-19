@@ -30,11 +30,11 @@ You have to fork the project, once done, you create a branch and you add what yo
 
 # 🐌 Features included
   - Multi-Character
-  - Character Choice
-  - Identity Register
-  - Character Creator
   - Money System (cash, bank, dirty)
   - Functions Server and Client side
+  - Adding the English, French, Italian, Spanish language
+  - Config File
+ 
 
 # ⚠️ Warning
 Downloading and publishing this resource on Github without using the github Fork option is not allowed and may result in a suspension of the repository. I invite you to respect my work and that of collaborators. 
