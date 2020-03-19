@@ -112,4 +112,114 @@ Langues['french'] = {
 
 }
 
+Langues['spanish'] = {
+  ['choice_perso'] = "Elección de personaje",
+  ['character'] = "Personaje",
+  ['unemployed'] = "Desempleados",
+  ['slotvide'] = "~p~      RANURA LIBRE",
 
+  ['name'] = "Apellido & Primer nombre",
+  ['cash'] = "Efectivo",
+  ['bank'] = "Banco",
+  ['dirty'] = "Sucio",
+  ['occupation'] = "Ocupación",
+
+  ['loading_in_progress'] = "Cargando",
+  ['wait_select_char'] = "Esperando selección de personaje",
+  ['connected_to_server'] = "~g~Conectado al servidor",
+
+  ['my_personnage'] = "Mi personaje",
+  ['fake_identity'] = "Identidad falsa",
+  ['save_character_creator'] = "Guardando la personalización de tu personaje en progreso",
+
+  ['problem_rediriged'] = "Ha ocurrido un problema, redirigir en progreso",
+  ['waiting'] = "Espere por favor",
+
+  ['error_identity_creator'] = "~r~Atención.~n~~w~No has completado correctamente el año de nacimiento de tu personaje.",
+
+  ['identity_nomrp'] = "Apellido & Primer nombre",
+  ['identity_lieudn'] = "Lugar de nacimiento",
+  ['identity_jourdn'] = "Dia de nacimiento",
+  ['identity_moisdn'] = "Mes de nacimiento",
+  ['identity_annedn'] = "año de nacimiento",
+  ['identity_continue'] = "~g~Seguir",
+
+  ['cl_character_sex'] = "tu genero",
+  ['cl_character_head'] = "tu cabeza",
+  ['cl_character_hide'] = "tu piel",
+  ['cl_character_beard'] = "tu barba",
+  ['cl_character_beardb'] = "Barba",
+  ['cl_character_eye'] = "tus ojos",
+  ['cl_character_eyeb'] = "ojos",
+  ['cl_character_hair'] = "tu cabello",
+  ['cl_character_hairb'] = "Cabello",
+  ['cl_character_eyebrow'] = "tus cejas",
+  ['cl_character_eyebrowb'] = "Cejas",
+  ['cl_character_haircolor'] = "tu color de cabello",
+  ['cl_character_color'] = "Color",
+  ['cl_character_imperfections'] = "tus imperfecciones",
+  ['cl_character_wrinkles'] = "tus arrugas",
+  ['cl_character_face'] = "tu cara",
+  ['cl_character_body'] = "tu cuerpo",
+  ['cl_character_outfit'] = "tu atuendo",
+  ['cl_character_outfita'] = "Atuendo 1",
+  ['cl_character_outfitb'] = "Atuendo 2",
+  ['cl_character_continue'] = "~g~Seguir & Guardar"
+
+}
+
+Langues['italian'] = {
+  ['choice_perso'] = "Scelta del personaggio",
+  ['character'] = "Carattere",
+  ['unemployed'] = "Senza Lavoro",
+  ['slotvide'] = "~p~      SLOT GRATUITO",
+
+  ['name'] = "Nome & Cognome",
+  ['cash'] = "Denaro contante",
+  ['bank'] = "Banca",
+  ['dirty'] = "Sporco",
+  ['occupation'] = "Mestiere",
+
+  ['loading_in_progress'] = "Caricamento",
+  ['wait_select_char'] = "In attesa di selezione del personaggio",
+  ['connected_to_server'] = "~g~Connesso al server",
+
+  ['my_personnage'] = "Il mio personaggio",
+  ['fake_identity'] = "falsa identità ",
+  ['save_character_creator'] = "Salvataggio della personalizzazione del personaggio in corso",
+
+  ['problem_rediriged'] = "Si è verificato un problema, reindirizzamento in corso",
+  ['waiting'] = "Per favore, aspetta",
+
+  ['error_identity_creator'] = "~r~Stai attento.~n~~w~Non hai completato correttamente l'anno di nascita della tua persona.",
+
+  ['identity_nomrp'] = "Nome & Cognome",
+  ['identity_lieudn'] = "Luogo di nascita",
+  ['identity_jourdn'] = "Giorno di nascita",
+  ['identity_moisdn'] = "Mese di nascita",
+  ['identity_annedn'] = "Anno di nascita",
+  ['identity_continue'] = "~g~Continuare",
+
+  ['cl_character_sex'] = "il tuo genere",
+  ['cl_character_head'] = "la tua testa",
+  ['cl_character_hide'] = "la tua pelle",
+  ['cl_character_beard'] = "la tua barba",
+  ['cl_character_beardb'] = "barba",
+  ['cl_character_eye'] = "i tuoi occhi",
+  ['cl_character_eyeb'] = "occhi",
+  ['cl_character_hair'] = "i tuoi capelli",
+  ['cl_character_hairb'] = "capelli",
+  ['cl_character_eyebrow'] = "le sopracciglia",
+  ['cl_character_eyebrowb'] = "sopracciglia",
+  ['cl_character_haircolor'] = "il colore dei tuoi capelli",
+  ['cl_character_color'] = "colore",
+  ['cl_character_imperfections'] = "le tue imperfezioni",
+  ['cl_character_wrinkles'] = "le tue rughe",
+  ['cl_character_face'] = "la tua faccia",
+  ['cl_character_body'] = "il tuo corpo",
+  ['cl_character_outfit'] = "il tuo vestito",
+  ['cl_character_outfita'] = "Vestito 1",
+  ['cl_character_outfitb'] = "Vestito 2",
+  ['cl_character_continue'] = "~g~Continua & Salva"
+
+}
