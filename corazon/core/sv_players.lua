@@ -8,6 +8,23 @@ RegisterNetEvent("corazon_core:removePlayerMoney")
 RegisterNetEvent("corazon_core:goDataGrip")
 RegisterNetEvent("corazon_core:goGripCharID")
 
+function GetPlayerInformations()
+	for k,v in inairs(GetPlayerIdentifiers(target)) do
+		if string.sub(v, 1, string.len("license:")) == "license:" then
+			license = v
+		elseif string.sub(v, 1, string.len("live:")) == "live:" then
+			liveid = v
+		elseif string.sub(v, 1, string.len("xbl:")) == "xbl:" then
+			xbox  = v
+		elseif string.sub(v, 1, string.len("discord:")) == "discord:" then
+			discord = v
+		elseif string.sub(v, 1, string.len("ip:")) == "ip:" then
+			playerip = v
+		end
+	end
+end
+
+
 AddEventHandler('corazon:setPlayerDataBdd',function(source)
 	CreateThread(function()
 	Wait(5000)
@@ -84,6 +101,7 @@ AddEventHandler("corazon_core:goGripCharID", function()
 	TriggerClientEvent("corazon_core:gripCharID", source, result)
 end)
 
+
 ----------------------------------------------------------------------------------------
 -- Fonction pour ajouter l'argent en cash
 
@@ -128,7 +146,6 @@ AddEventHandler("corazon_core:functionRemoveMoney", function(charID, amount)
 	functionsRemoveMoney(charID, amount)
 end)
 
-
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -154,7 +171,6 @@ RegisterNetEvent("corazon_core:functionAddBank")
 AddEventHandler("corazon_core:functionAddBank", function(charID, amount)
 	functionsAddBank(charID, amount)
 end)
-
 
 ----------------------------------------------------------------------------------------
 -- Fonction pour retirer de l'argent en banque

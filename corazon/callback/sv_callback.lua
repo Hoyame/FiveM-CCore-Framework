@@ -1,5 +1,3 @@
----- Callback Serveur
-
 ServerCallbacks = {}
 
 RegisterServerEvent('trigger_server_callback')
@@ -19,6 +17,5 @@ TriggerServerCallback = function(name, requestId, source, cb, ...)
     if ServerCallbacks[name] ~= nil then
         ServerCallbacks[name](source, cb, ...)
     else
-        print("callback marche pô")
     end
 end

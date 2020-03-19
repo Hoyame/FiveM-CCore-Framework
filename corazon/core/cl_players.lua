@@ -3,8 +3,7 @@ CCore = {}
 
 cPlayer = {}
 cPlayer.player = {}
-cPlayer.vIdentite = {}
-cPlayer.fIdentite = {}
+
 
 --------------------------------------------------------------------------
 -- Variables Etendues
@@ -18,31 +17,31 @@ cPlayer.player.espece = ""
 cPlayer.player.banque = ""
 cPlayer.player.sale = ""
 
-cPlayer.vIdentite.name = ""
-cPlayer.vIdentite.lieu = ""
-cPlayer.vIdentite.jour = ""
-cPlayer.vIdentite.mois = ""
-cPlayer.vIdentite.annee = ""
+cPlayer.player.vIDname = ""
+cPlayer.player.vIDlieu = ""
+cPlayer.player.vIDjour = ""
+cPlayer.player.vIDmois = ""
+cPlayer.player.vIDannee = ""
 
-cPlayer.vIdentite.arme = false
-cPlayer.vIdentite.camion = false
-cPlayer.vIdentite.voiture = false
-cPlayer.vIdentite.moto = false
+cPlayer.player.vIDarme = false
+cPlayer.player.vIDcamion = false
+cPlayer.player.vIDvoiture = false
+cPlayer.player.vIDmoto = false
 
 -----------------------------------
 
-cPlayer.fIdentite.name = ""
-cPlayer.fIdentite.lieu = ""
-cPlayer.fIdentite.jour = ""
-cPlayer.fIdentite.mois = ""
-cPlayer.fIdentite.annee = ""
+cPlayer.player.fIDname = ""
+cPlayer.player.fIDlieu = ""
+cPlayer.player.fIDjour = ""
+cPlayer.player.fIDmois = ""
+cPlayer.player.fIDannee = ""
 
-cPlayer.fIdentite.job = ""
+cPlayer.player.fIDjob = ""
 
-cPlayer.fIdentite.arme = false
-cPlayer.fIdentite.camion = false
-cPlayer.fIdentite.voiture = false
-cPlayer.fIdentite.moto = false
+cPlayer.player.fIDarme = false
+cPlayer.player.fIDcamion = false
+cPlayer.player.fIDvoiture = false
+cPlayer.player.fIDmoto = false
 
 
 --------------------------------------------------------------------------
@@ -75,25 +74,25 @@ end)
 --------------------------------------------------------------------------
 
 AddEventHandler("corazon_core:dataGrip", function(result)
-    cPlayer.player.license = tostring(result[1].license)
+    --cPlayer.player.license = tostring(result[1].license)
     cPlayer.player.job = tostring(result[1].pJob)
     cPlayer.player.perm = tostring(result[1].sPerm)
     cPlayer.player.espece = tonumber(result[1].pEspece)
     cPlayer.player.banque = tonumber(result[1].pBanque)
     cPlayer.player.sale = tonumber(result[1].pSale)
     
-    cPlayer.vIdentite.name = tostring(result[1].iNom)
-    cPlayer.vIdentite.lieu = tostring(result[1].iLieu)
-    cPlayer.vIdentite.jour = tonumber(result[1].iJour)
-    cPlayer.vIdentite.mois = tostring(result[1].iMois)
-    cPlayer.vIdentite.annee = tonumber(result[1].iannee)
+    cPlayer.player.vIDname = tostring(result[1].iNom)
+    cPlayer.player.vIDlieu = tostring(result[1].iLieu)
+    cPlayer.player.vIDjour = tonumber(result[1].iJour)
+    cPlayer.player.vIDmois = tostring(result[1].iMois)
+    cPlayer.player.vIDannee = tonumber(result[1].iannee)
 
-    cPlayer.fIdentite.name = tostring(result[1].fNom) 
-    cPlayer.fIdentite.lieu = tostring(result[1].fLieu)
-    cPlayer.fIdentite.jour = tonumber(result[1].fJour)
-    cPlayer.fIdentite.mois = tostring(result[1].fMois)
-    cPlayer.fIdentite.annee = tonumber(result[1].fannee)
-    cPlayer.fIdentite.job = tostring(result[1].fJob)
+    cPlayer.player.fIDname = tostring(result[1].fNom) 
+    cPlayer.player.fIDlieu = tostring(result[1].fLieu)
+    cPlayer.player.fIDjour = tonumber(result[1].fJour)
+    cPlayer.player.fIDmois = tostring(result[1].fMois)
+    cPlayer.player.fIDannee = tonumber(result[1].fannee)
+    cPlayer.player.fIDjob = tostring(result[1].fJob)
 
     local idArme, idCamion, idMoto, idVoiture, fdArme, fdCamion, fdMoto, fdVoiture
 
@@ -108,21 +107,21 @@ AddEventHandler("corazon_core:dataGrip", function(result)
     fdVoiture = tonumber(result[1].fpMoto)
 
     if idArme == "1" then 
-        cPlayer.vIdentite.arme = true
+        cPlayer.player.vIDarme = true
     elseif idCamion == "1" then 
-        cPlayer.vIdentite.camion = true
+        cPlayer.player.vIDcamion = true
     elseif idMoto == "1" then 
-        cPlayer.vIdentite.moto = true
+        cPlayer.player.vIDmoto = true
     elseif idVoiture == "1" then 
-        cPlayer.vIdentite.voiture = true 
+        cPlayer.player.vIDvoiture = true 
     elseif fdArme == "1" then 
-        cPlayer.fIdentite.arme = true
+        cPlayer.player.fIDarme = true
     elseif fdCamion == "1" then 
-        cPlayer.fIdentite.camion = true 
+        cPlayer.player.fIDcamion = true 
     elseif fdMoto == "1" then 
-        cPlayer.fIdentite.moto = true 
+        cPlayer.player.fIDmoto = true 
     elseif fdVoiture == "1" then 
-        cPlayer.fIdentite.camion = true
+        cPlayer.player.fIDcamion = true
     end
 
 end)
@@ -144,7 +143,7 @@ function getPlayerPermissions()
 end
 
 function getPlayerIdentityName()
-    return cPlayer.vIdentite.name
+    return cPlayer.player.vIDname
 end
 
 function getPlayerJob()
@@ -157,6 +156,6 @@ end
 -------------------------------------------------------------------------
 
 RegisterCommand("getCharID", function()
-    local zbi = getCharID()
+    local zbi = getPlayerIdentityName()
     print(zbi)
 end)

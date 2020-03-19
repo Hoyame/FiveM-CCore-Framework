@@ -25,12 +25,14 @@ local selectionPersonnage = {
 				local charID = getCharID()
 				Corazon.Connexion.Anim:Connected(charID)
 
-				if oneSlotLibre == true then 		-- si personnage 1 exsiste
+				if oneSlotLibre == true then
 					self:CloseMenu(true)
-					-- Evenement pour spawn le joueur					
-				elseif oneSlotLibre == false then 	-- si personnage 1 exsiste PAS
+					TriggerEvent("corazon:spawnCharacterData")
+					TriggerEvent("corazon_core:getPlayerData")
+					TriggerEvent("corazon.game:setIsConnected")
+				elseif oneSlotLibre == false then 
 					self:CloseMenu(true)
-					-- Evenement pour créer le personnage (identité, perso)
+					TriggerEvent("corazon:createIdentity")
 				end
 			end
 
@@ -40,12 +42,14 @@ local selectionPersonnage = {
 				local charID = getCharID()
 				Corazon.Connexion.Anim:Connected(charID)
 
-				if twoSlotLibre == true then			-- si personnage 2 exsiste
+				if twoSlotLibre == true then
 					self:CloseMenu(true)
-					-- Evenement pour spawn le joueur					
-				elseif twoSlotLibre == false then 		-- si personnage 2 exsiste PAS
+					TriggerEvent("corazon:spawnCharacterData")
+					TriggerEvent("corazon_core:getPlayerData")
+					TriggerEvent("corazon.game:setIsConnected")
+				elseif twoSlotLibre == false then 
 					self:CloseMenu(true)
-					-- Evenement pour créer le personnage (identité, perso)
+					TriggerEvent("corazon:createIdentity")
 				end
 			end
 		end,
