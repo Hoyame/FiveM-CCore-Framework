@@ -33,6 +33,7 @@ You have to fork the project, once done, you create a branch and you add what yo
   - Character Choice
   - Identity Register
   - Character Creator
+  - Money System (cash, bank, dirty)
   - Functions Server and Client side
 
 # ⚠️ Warning
