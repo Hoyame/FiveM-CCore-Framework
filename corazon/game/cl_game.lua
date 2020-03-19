@@ -17,10 +17,19 @@ AddEventHandler("corazon:loadPlayer", function()
 end)
 
 --------------------------------------------------------
+local isConnected = false
+
+AddEventHandler("corazon.game:setIsConnected", function()
+    isConnected = true
+end)
 
 Citizen.CreateThread(function()
 	while true do
-	 	Citizen.Wait(10000)
-        TriggerServerEvent("corazon_core:goGripCharID")
+        Citizen.Wait(10000)
+        
+        if isConnected then 
+            TriggerServerEvent("corazon_core:goGripCharID")
+        end
 	end
 end)
+
