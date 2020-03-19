@@ -13,5 +13,6 @@
  
  ## To come up
   - Inventory system
+  - Property system
   - Admin menu
   - Job police example
