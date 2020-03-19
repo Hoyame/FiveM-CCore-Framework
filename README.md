@@ -29,7 +29,11 @@ You have to fork the project, once done, you create a branch and you add what yo
  - [MySQL Async](https://github.com/brouznouf/fivem-mysql-async)
 
 # 🐌 Features included
- - Multi-Character
+  - Multi-Character
+  - Character Choice
+  - Identity Register
+  - Character Creator
+  - Functions Server and Client side
 
 # ⚠️ Warning
 Downloading and publishing this resource on Github without using the github Fork option is not allowed and may result in a suspension of the repository. I invite you to respect my work and that of collaborators. 
