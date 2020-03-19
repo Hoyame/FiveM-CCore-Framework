@@ -7,8 +7,8 @@
  - Identity Register
  - Character Creator
 
-## In creation
- - Adding the English language
+## v.0.0.3
+ - Adding the English, French, Italian, Spanish language
  - Config File
  
  ## To come up
