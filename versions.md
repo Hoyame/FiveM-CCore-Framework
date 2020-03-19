@@ -10,6 +10,7 @@
 ## v.0.0.3
  - Adding the English, French, Italian, Spanish language
  - Config File
+ - Save/spawn player position
  
  ## To come up
   - Inventory system
