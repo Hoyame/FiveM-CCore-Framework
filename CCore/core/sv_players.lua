@@ -8,22 +8,6 @@ RegisterNetEvent("corazon_core:removePlayerMoney")
 RegisterNetEvent("corazon_core:goDataGrip")
 RegisterNetEvent("corazon_core:goGripCharID")
 
-function GetPlayerInformations()
-	for k,v in inairs(GetPlayerIdentifiers(target)) do
-		if string.sub(v, 1, string.len("license:")) == "license:" then
-			license = v
-		elseif string.sub(v, 1, string.len("live:")) == "live:" then
-			liveid = v
-		elseif string.sub(v, 1, string.len("xbl:")) == "xbl:" then
-			xbox  = v
-		elseif string.sub(v, 1, string.len("discord:")) == "discord:" then
-			discord = v
-		elseif string.sub(v, 1, string.len("ip:")) == "ip:" then
-			playerip = v
-		end
-	end
-end
-
 
 AddEventHandler('corazon:setPlayerDataBdd',function(source)
 	CreateThread(function()
@@ -241,3 +225,35 @@ RegisterNetEvent("corazon_core:functionRemoveSale")
 AddEventHandler("corazon_core:functionRemoveSale", function(charID, amount)
 	functionsRemoveSale(charID, amount)
 end)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+function lastposplayer(license, charID)
+	local license = license
+	local charID = charID
+	return MySQL.Sync.fetchScalar("SELECT lastPos FROM joueurs_d"..charID.."_perso WHERE license = @license", {['@license'] = license})
+end
+
+RegisterServerEvent("corazon:savePlayerPosition")
+AddEventHandler("corazon:savePlayerPosition", function(LastPosX, LastPosY, LastPosZ, charID)
+	local source = source
+	local charID = charID
+	local license = GetPlayerIdentifiers(source)[1]
+	local LastPos = "{" .. LastPosX .. ", " .. LastPosY .. ",  " .. LastPosZ .. "}"
+	MySQL.Sync.execute("UPDATE joueurs_d"..charID.."_perso SET lastPos = @lastpos WHERE license = @license", {['@license'] = license, ['@lastpos'] = LastPos})
+end)
+
+
+RegisterServerEvent("corazon:spawnPlayerToLastPosition")
+AddEventHandler("corazon:spawnPlayerToLastPosition", function(charID)
+	local source = source
+	local charID = charID
+	local license = GetPlayerIdentifiers(source)[1]
+	local lastpos = lastposplayer(license, charID)
+	if lastpos ~= "" then
+		local ToSpawnPos = json.decode(lastpos)
+		TriggerClientEvent("corazon:LastPostClient", source, ToSpawnPos[1], ToSpawnPos[2], ToSpawnPos[3])
+	end
+end)
+

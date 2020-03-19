@@ -58,12 +58,17 @@ AddEventHandler("corazon_core:gripCharID", function(result)
 end)
 
 function setCharID(data)
-    local data = ""
     cPlayer.player.charID = data
 end
 
 function getCharID()
-    return cPlayer.player.charID
+    if cPlayer.player.charID == "" then 
+        print("guillmets")
+    elseif cPlayer.player.charID == nil then
+        print("nil") 
+    else 
+        return cPlayer.player.charID
+    end
 end
 --------------------------------------------------------------------------
 AddEventHandler("corazon_core:getPlayerData", function()
@@ -150,12 +155,25 @@ function getPlayerJob()
     return cPlayer.player.job
 end
 
-
-
 --------------------------------------------------------------------------
 -------------------------------------------------------------------------
 
-RegisterCommand("getCharID", function()
-    local zbi = getPlayerIdentityName()
-    print(zbi)
+function RequestToSave()
+    local charID = getCharID()
+
+	LastPosX, LastPosY, LastPosZ = table.unpack(GetEntityCoords(GetPlayerPed(-1), true))
+	TriggerServerEvent("corazon:savePlayerPosition", LastPosX , LastPosY , LastPosZ, charID)
+end
+
+--Event pour le spawn du joueur vers la dernière position connue
+RegisterNetEvent("corazon:LastPostClient")
+AddEventHandler("corazon:LastPostClient", function(PosX, PosY, PosZ)
+	SetEntityCoords(GetPlayerPed(-1), PosX, PosY, PosZ, 1, 0, 0, 1)
 end)
+
+local function RequestToSave()
+    local charID = getCharID()
+
+	LastPosX, LastPosY, LastPosZ = table.unpack(GetEntityCoords(GetPlayerPed(-1), true))
+	TriggerServerEvent("corazon:savePlayerPosition", LastPosX , LastPosY , LastPosZ, charID)
+end

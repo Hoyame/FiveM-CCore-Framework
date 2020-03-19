@@ -4,6 +4,12 @@ game 'gta5'
 server_script '@mysql-async/lib/MySQL.lua'
 
 client_scripts {
+	'sh_locale.lua',
+	'sh_translate.lua',
+	'sh_config.lua'
+}
+
+client_scripts {
 	'callback/cl_callback.lua',
 	----------------------------------------------
 	'core/sh_menu.lua',
@@ -16,6 +22,12 @@ client_scripts {
 	----------------------------------------------
 	'player/character/cl_character.lua',
 	'player/identity/cl_identity.lua'
+}
+
+server_scripts {
+	'sh_locale.lua',
+	'sh_translate.lua',
+	'sh_config.lua'
 }
 
 server_scripts {
