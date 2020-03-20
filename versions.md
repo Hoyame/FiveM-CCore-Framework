@@ -3,9 +3,9 @@
  - Functions Server and Client side
  - Multi-Character
 ## v.0.0.2
- - Character Choice
- - Identity Register
- - Character Creator
+ - Character Choice  [Deleted] 
+ - Identity Register [Deleted] 
+ - Character Creator [Deleted]
 
 ## v.0.0.3
  - Adding the English, French, Italian, Spanish language
