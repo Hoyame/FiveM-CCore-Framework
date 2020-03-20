@@ -18,3 +18,7 @@
   - Admin menu
   - Job police example
   - Save/spawn player position
+
+ - Character Choice  [RageUI] 
+ - Identity Register [RageUI] 
+ - Character Creator [RageUI]
