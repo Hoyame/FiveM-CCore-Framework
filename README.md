@@ -40,7 +40,7 @@ You have to fork the project, once done, you create a branch and you add what yo
   - Adding the English, French, Italian, Spanish language
   - Config File
   - Save/spawn player position
-  - Character Choice [RageUI]
+  - Character Choice
 
 
 # ⚠️ Warning
