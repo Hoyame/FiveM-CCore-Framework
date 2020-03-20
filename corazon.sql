@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 17 mars 2020 à 19:58
+-- Généré le :  ven. 20 mars 2020 à 23:03
 -- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.3.12
 
@@ -42,12 +42,6 @@ CREATE TABLE IF NOT EXISTS `joueurs` (
   PRIMARY KEY (`license`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
---
--- Déchargement des données de la table `joueurs`
---
-
-INSERT INTO `joueurs` (`id`, `license`, `steam`, `live`, `xbox`, `discord`, `ban`, `firstConnection`, `charID`) VALUES
-(NULL, 'license:0952c2029a28248d70dc879a193c1b91aa5475fe', NULL, NULL, NULL, NULL, 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -58,6 +52,7 @@ INSERT INTO `joueurs` (`id`, `license`, `steam`, `live`, `xbox`, `discord`, `ban
 DROP TABLE IF EXISTS `joueurs_d1_perso`;
 CREATE TABLE IF NOT EXISTS `joueurs_d1_perso` (
   `license` varchar(50) NOT NULL,
+  `lastPos` longtext DEFAULT NULL,
   `dataPed` longtext DEFAULT NULL,
   `dataSkin` longtext DEFAULT NULL,
   `pEspece` int(11) NOT NULL DEFAULT 1000,
@@ -90,10 +85,6 @@ CREATE TABLE IF NOT EXISTS `joueurs_d1_perso` (
 --
 -- Déchargement des données de la table `joueurs_d1_perso`
 --
-
-INSERT INTO `joueurs_d1_perso` (`license`, `dataPed`, `dataSkin`, `pEspece`, `pBanque`, `pSale`, `pJob`, `sPerm`, `iNom`, `iLieu`, `iJour`, `iMois`, `iAnnée`, `ipArme`, `ipCamion`, `ipVoiture`, `ipMoto`, `fNom`, `fLieu`, `fJour`, `fMois`, `fAnnée`, `fJob`, `fpArme`, `fpCamion`, `fpVoiture`, `fpMoto`) VALUES
-('license:0952c2029a28248d70dc879a193c1b91aa5475fe', NULL, '{\"eyebrows_1\":1,\"watches_1\":-1,\"shoes_2\":0,\"moles_2\":1,\"arms\":0,\"sex\":0,\"beard_3\":7,\"pants_1\":0,\"ears_1\":-1,\"ears_2\":-1,\"chain_1\":0,\"complexion_2\":1,\"chain_2\":0,\"skin\":4,\"helmet_2\":-1,\"torso_2\":0,\"hair_1\":6,\"glasses_2\":0,\"glasses_1\":0,\"hair_color_1\":7,\"beard_1\":1,\"tshirt_1\":0,\"watches_2\":-1,\"pants_2\":0,\"helmet_1\":-1,\"hair_color_2\":7,\"eye_color\":2,\"hair_2\":0,\"shoes_1\":0,\"face\":3,\"beard_4\":7,\"tshirt_2\":0,\"arms_2\":0,\"torso_1\":0}', 1000, 500, 0, NULL, NULL, 'Corazon', 'Los Santos', 28, 'Septembre', 2006, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0);
-
 -- --------------------------------------------------------
 
 --
@@ -103,6 +94,7 @@ INSERT INTO `joueurs_d1_perso` (`license`, `dataPed`, `dataSkin`, `pEspece`, `pB
 DROP TABLE IF EXISTS `joueurs_d2_perso`;
 CREATE TABLE IF NOT EXISTS `joueurs_d2_perso` (
   `license` varchar(50) NOT NULL,
+  `lastPos` longtext DEFAULT NULL,
   `dataPed` longtext DEFAULT NULL,
   `dataSkin` longtext DEFAULT NULL,
   `pEspece` int(11) NOT NULL DEFAULT 1000,
@@ -134,11 +126,6 @@ CREATE TABLE IF NOT EXISTS `joueurs_d2_perso` (
 
 --
 -- Déchargement des données de la table `joueurs_d2_perso`
---
-
-INSERT INTO `joueurs_d2_perso` (`license`, `dataPed`, `dataSkin`, `pEspece`, `pBanque`, `pSale`, `pJob`, `sPerm`, `iNom`, `iLieu`, `iJour`, `iMois`, `iAnnée`, `ipArme`, `ipCamion`, `ipVoiture`, `ipMoto`, `fNom`, `fLieu`, `fJour`, `fMois`, `fAnnée`, `fJob`, `fpArme`, `fpCamion`, `fpVoiture`, `fpMoto`) VALUES
-('license:0952c2029a28248d70dc879a193c1b91aa5475fe', NULL, NULL, 1000, 500, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0);
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
