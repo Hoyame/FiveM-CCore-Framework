@@ -89,141 +89,85 @@ end)
 ----------------------------------------------------------------------------------------
 -- Fonction pour ajouter l'argent en cash
 
-function functionsAddMoney(charID, amount)
-	local charID = charID
-	local source = source
-	local license = GetPlayerIdentifiers(source)[1]
-
-	local result = MySQL.Sync.fetchAll('SELECT pEspece FROM joueurs_d'..charID..'_perso WHERE license = @license', {['@license'] = license})
+function setMoney(money, setting, charID, amount)
+	if money == cash then 
+		if setting == add then 
+			local charID = charID
+			local source = source
+			local license = GetPlayerIdentifiers(source)[1]
 		
-	MySQL.Async.execute('UPDATE joueurs_d'..charID..'_perso SET pEspece = @money WHERE license = @license', {
-		['@license'] = license, 
-		['@money'] = math.abs(result[1].money + amount)
-	})
-
+			local result = MySQL.Sync.fetchAll('SELECT pEspece FROM joueurs_d'..charID..'_perso WHERE license = @license', {['@license'] = license})
+				
+			MySQL.Async.execute('UPDATE joueurs_d'..charID..'_perso SET pEspece = @money WHERE license = @license', {
+				['@license'] = license, 
+				['@money'] = math.abs(result[1].money + amount)
+			})
+		elseif setting == remove then 
+			local charID = charID
+			local source = source
+			local license = GetPlayerIdentifiers(source)[1]
+		
+			local result = MySQL.Sync.fetchAll('SELECT pEspece FROM joueurs_d'..charID..'_perso WHERE license = @license', {['@license'] = license})
+				
+			MySQL.Async.execute('UPDATE joueurs_d'..charID..'_perso SET pEspece = @money WHERE license = @license', {
+				['@license'] = license, 
+				['@money'] = math.abs(result[1].money - amount)
+			})
+		end
+	elseif money == bank then 
+		if setting == add then
+			local charID = charID
+			local source = source
+			local license = GetPlayerIdentifiers(source)[1]
+		
+			local result = MySQL.Sync.fetchAll('SELECT pBanque FROM joueurs_d'..charID..'_perso WHERE license = @license', {['@license'] = license})
+				
+			MySQL.Async.execute('UPDATE joueurs_d'..charID..'_perso SET pBanque = @bank WHERE license = @license', {
+				['@license'] = license, 
+				['@bank'] = math.abs(result[1].bank + amount)
+			})
+		elseif setting == remove then 
+			local charID = charID
+			local source = source
+			local license = GetPlayerIdentifiers(source)[1]
+		
+			local result = MySQL.Sync.fetchAll('SELECT pBanque FROM joueurs_d'..charID..'_perso WHERE license = @license', {['@license'] = license})
+				
+			MySQL.Async.execute('UPDATE joueurs_d'..charID..'_perso SET pBanque = @bank WHERE license = @license', {
+				['@license'] = license, 
+				['@bank'] = math.abs(result[1].bank - amount)
+			})
+		end 
+	elseif money == dirty then
+		if setting == add then 
+			local charID = charID
+			local source = source
+			local license = GetPlayerIdentifiers(source)[1]
+		
+			local result = MySQL.Sync.fetchAll('SELECT pSale FROM joueurs_d'..charID..'_perso WHERE license = @license', {['@license'] = license})
+				
+			MySQL.Async.execute('UPDATE joueurs_d'..charID..'_perso SET pSale = @sale WHERE license = @license', {
+				['@license'] = license, 
+				['@sale'] = math.abs(result[1].sale + amount)
+			})
+		elseif setting == remove then
+			local charID = charID
+			local source = source
+			local license = GetPlayerIdentifiers(source)[1]
+		
+			local result = MySQL.Sync.fetchAll('SELECT pSale FROM joueurs_d'..charID..'_perso WHERE license = @license', {['@license'] = license})
+				
+			MySQL.Async.execute('UPDATE joueurs_d'..charID..'_perso SET pSale = @sale WHERE license = @license', {
+				['@license'] = license, 
+				['@sale'] = math.abs(result[1].sale - amount)
+			})
+		end
+	end
 end
 
-RegisterNetEvent("corazon_core:functionAddMoney")
-AddEventHandler("corazon_core:functionAddMoney", function(charID, amount)
-	functionsAddMoney(charID, amount)
-end)
-
-----------------------------------------------------------------------------------------
--- Fonction pour retirer de l'argent en cash
-
-function functionsRemoveMoney(charID, amount)
-	local charID = charID
-	local source = source
-	local license = GetPlayerIdentifiers(source)[1]
-
-	local result = MySQL.Sync.fetchAll('SELECT pEspece FROM joueurs_d'..charID..'_perso WHERE license = @license', {['@license'] = license})
-		
-	MySQL.Async.execute('UPDATE joueurs_d'..charID..'_perso SET pEspece = @money WHERE license = @license', {
-		['@license'] = license, 
-		['@money'] = math.abs(result[1].money - amount)
-	})
-
-end
-
-RegisterNetEvent("corazon_core:functionRemoveMoney")
-AddEventHandler("corazon_core:functionRemoveMoney", function(charID, amount)
-	functionsRemoveMoney(charID, amount)
-end)
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-----------------------------------------------------------------------------------------
--- Fonction pour ajouter l'argent en banque
-
-function functionsAddBank(charID, amount)
-	local charID = charID
-	local source = source
-	local license = GetPlayerIdentifiers(source)[1]
-
-	local result = MySQL.Sync.fetchAll('SELECT pBanque FROM joueurs_d'..charID..'_perso WHERE license = @license', {['@license'] = license})
-		
-	MySQL.Async.execute('UPDATE joueurs_d'..charID..'_perso SET pBanque = @bank WHERE license = @license', {
-		['@license'] = license, 
-		['@bank'] = math.abs(result[1].bank + amount)
-	})
-
-end
-
-RegisterNetEvent("corazon_core:functionAddBank")
-AddEventHandler("corazon_core:functionAddBank", function(charID, amount)
-	functionsAddBank(charID, amount)
-end)
-
-----------------------------------------------------------------------------------------
--- Fonction pour retirer de l'argent en banque
-
-function functionsRemoveBank(charID, amount)
-	local charID = charID
-	local source = source
-	local license = GetPlayerIdentifiers(source)[1]
-
-	local result = MySQL.Sync.fetchAll('SELECT pBanque FROM joueurs_d'..charID..'_perso WHERE license = @license', {['@license'] = license})
-		
-	MySQL.Async.execute('UPDATE joueurs_d'..charID..'_perso SET pBanque = @bank WHERE license = @license', {
-		['@license'] = license, 
-		['@bank'] = math.abs(result[1].bank - amount)
-	})
-
-end
-
-RegisterNetEvent("corazon_core:functionRemoveBank")
-AddEventHandler("corazon_core:functionRemoveBank", function(charID, amount)
-	functionsRemoveBank(charID, amount)
-end)
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-----------------------------------------------------------------------------------------
--- Fonction pour ajouter l'argent en sale
-
-function functionsAddSale(charID, amount)
-	local charID = charID
-	local source = source
-	local license = GetPlayerIdentifiers(source)[1]
-
-	local result = MySQL.Sync.fetchAll('SELECT pSale FROM joueurs_d'..charID..'_perso WHERE license = @license', {['@license'] = license})
-		
-	MySQL.Async.execute('UPDATE joueurs_d'..charID..'_perso SET pSale = @sale WHERE license = @license', {
-		['@license'] = license, 
-		['@sale'] = math.abs(result[1].sale + amount)
-	})
-
-end
-
-RegisterNetEvent("corazon_core:functionAddSale")
-AddEventHandler("corazon_core:functionAddSale", function(charID, amount)
-	functionsAddSale(charID, amount)
-end)
-
-----------------------------------------------------------------------------------------
--- Fonction pour retirer de l'argent en sale
-
-function functionsRemoveSale(charID, amount)
-	local charID = charID
-	local source = source
-	local license = GetPlayerIdentifiers(source)[1]
-
-	local result = MySQL.Sync.fetchAll('SELECT pSale FROM joueurs_d'..charID..'_perso WHERE license = @license', {['@license'] = license})
-		
-	MySQL.Async.execute('UPDATE joueurs_d'..charID..'_perso SET pSale = @sale WHERE license = @license', {
-		['@license'] = license, 
-		['@sale'] = math.abs(result[1].sale - amount)
-	})
-
-end
-
-RegisterNetEvent("corazon_core:functionRemoveSale")
-AddEventHandler("corazon_core:functionRemoveSale", function(charID, amount)
-	functionsRemoveSale(charID, amount)
+RegisterNetEvent("corazon_core:setMoney")
+AddEventHandler("corazon_core:setMoney", function(money, setting, charID, amount)
+	setMoney(money, setting, charID, amount)
 end)
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
