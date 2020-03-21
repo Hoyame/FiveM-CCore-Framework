@@ -41,7 +41,7 @@ You have to fork the project, once done, you create a branch and you add what yo
   - Config File
   - Save/spawn player position
   - Character Choice
-  - Identity Register [RageUI] 
+  - Identity Register
 
 
 # ⚠️ Warning
