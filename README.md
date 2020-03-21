@@ -51,4 +51,4 @@ It does not work with esx, it replaces it
 # Credits
 - [Media Previews] [eR0ot](https://github.com/eR0oT)
 
-# Discord : https://discord.gg/22jphT9
+# Discord : https://discord.gg/xQf8x8s
