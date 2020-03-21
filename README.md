@@ -49,6 +49,6 @@ Downloading and publishing this resource on Github without using the github Fork
 
 It does not work with esx, it replaces it
 # Credits
-- [Media Previews] [ryaanmarc](https://github.com/ryaanmarc)
+- [Media Previews] [GitHub](https://github.com/ryaanmarc) [Twitter](https://twitter.com/ryaanmarc)
 
 # Discord : https://discord.gg/J2ZE4bs
