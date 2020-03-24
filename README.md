@@ -5,10 +5,6 @@
 <a href="https://badgen.net/github/releases/corazon2/FiveM-CCore-Framework"><img src="https://badgen.net/github/releases/corazon2/FiveM-CCore-Framework" alt="license"></a> 
 </p>
 
---<p align="center">
---<a href="http://hits.dwyl.com/corazon2/FiveM-CCore-Framework"><img src="http://hits.dwyl.com/corazon2/FiveM-CCore-Framework.svg" alt="license"></a> 
---</p>
-
 <p align="center">
 <img width="80%" src="https://cdn.discordapp.com/attachments/685229563915141194/690359158763028510/ccore.png">
 </p>
