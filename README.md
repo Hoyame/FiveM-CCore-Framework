@@ -1,7 +1,7 @@
 <p align="center">
-<a href="https://badgen.net/github/release/corazon2/FiveM-CCore"><img src="https://badgen.net/github/release/corazon2/FiveM-CCore" alt="license"></a> 
-<a href="https://badgen.net/github/commits/corazon2/FiveM-CCore"><img src="https://badgen.net/github/commits/corazon2/FiveM-CCore" alt="license"></a> 
-<a href="https://badgen.net/github/last-commit/corazon2/FiveM-CCore"><img src="https://badgen.net/github/last-commit/corazon2/FiveM-CCore" alt="license"></a> 
+<a href="https://badgen.net/github/release/corazon2/FiveM-CCore-Framework"><img src="https://badgen.net/github/release/corazon2/FiveM-CCore-Framework" alt="license"></a> 
+<a href="https://badgen.net/github/commits/corazon2/FiveM-CCore-Framework"><img src="https://badgen.net/github/commits/corazon2/FiveM-CCore-Framework" alt="license"></a> 
+<a href="https://badgen.net/github/last-commit/corazon2/FiveM-CCore-Framework"><img src="https://badgen.net/github/last-commit/corazon2/FiveM-CCore-Framework" alt="license"></a> 
 <a href="https://badgen.net/github/releases/corazon2/FiveM-CCore"><img src="https://badgen.net/github/releases/corazon2/FiveM-CCore" alt="license"></a> 
 </p>
 
