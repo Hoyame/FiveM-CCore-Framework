@@ -47,4 +47,4 @@ It does not work with esx, it replaces it
 # Credits
 - [Media Previews] [ryaanmarc] [GitHub](https://github.com/ryaanmarc) [Twitter](https://twitter.com/ryaanmarc)
 
-# Discord : https://discord.gg/J2ZE4bs
+# Discord : https://discord.gg/BWcENUB
