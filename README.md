@@ -7,6 +7,7 @@
 
 <p align="center">
   <a href="http://hits.dwyl.com/corazon2/FiveM-CCore-Framework"><img src="http://hits.dwyl.com/corazon2/FiveM-CCore-Framework.svg"      alt="license"></a> 
+  <a href="http://hits.dwyl.com/corazon2/FiveM-CCore"><img src="http://hits.dwyl.com/corazon2/FiveM-CCore.svg"      alt="license"></a> 
 </p>
 
 <p align="center">
