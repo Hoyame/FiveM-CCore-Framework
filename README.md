@@ -50,6 +50,7 @@ Downloading and publishing this resource on Github without using the github Fork
 
 It does not work with esx, it replaces it
 # Credits
+- [RageUI] [iTexZoz] [GitHub](https://github.com/iTexZoz)
 - [Media Previews] [ryaanmarc] [GitHub](https://github.com/ryaanmarc) [Twitter](https://twitter.com/ryaanmarc)
 
 # Discord : https://discord.gg/BWcENUB
