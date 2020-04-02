@@ -1,4 +1,4 @@
-Corazon = Corazon or {}
+Corazon = {}
 Corazon.Game = {}
 
 --------------------------------------------------------
@@ -9,12 +9,12 @@ RegisterNetEvent("corazon.game:setIsConnected")
 
 --------------------------------------------------------
 
-function Corazon.Game:loadPlayer()
+function CzonGMLoadPlayer()
     TriggerServerEvent("corazon:firstConnexionCreate")
 end
 
 AddEventHandler("corazon:loadPlayer", function()
-    Corazon.Game:loadPlayer()
+    CzonGMLoadPlayer()
 end)
 
 --------------------------------------------------------
@@ -38,29 +38,26 @@ Citizen.CreateThread(function()
 	end
 end)
 
---[[
-Citizen.CreateThread(function()
-    while true do
-        if Config.enablePvP then
+if Config.enablePvP then 
+    Citizen.CreateThread(function()
+        while true do
             Citizen.Wait(0)
-
-            for _, player in ipairs(GetActivePlayers()) do
-                local ped = GetPlayerPed(player)
-                SetCanAttackFriendly(GetPlayerPed(i), true, true)
-                NetworkSetFriendlyFireOption(true)
-                SetPlayerWantedLevel(GetPlayerPed(i), 0, false)
-                SetPlayerWantedLevelNow(GetPlayerPed(i), false)
+            for i = 0,256 do
+                if NetworkIsPlayerActive(i) then
+                    SetCanAttackFriendly(GetPlayerPed(i), true, true)
+                    NetworkSetFriendlyFireOption(true)
+                    SetPlayerWantedLevel(GetPlayerPed(i), 0, false)
+                    SetPlayerWantedLevelNow(GetPlayerPed(i), false)
+                end
             end
-        else 
-            Citizen.Wait(1000)
         end
-	end
-end)
+    end)
+end
 
 if Config.copsWanted then
 	Citizen.CreateThread(function()
 		while true do
-			Citizen.Wait(0)
+			Citizen.Wait(100)
 			local playerId = PlayerId()
 
 			if GetPlayerWantedLevel(playerId) ~= 0 then
@@ -70,4 +67,3 @@ if Config.copsWanted then
 		end
 	end)
 end
---]]

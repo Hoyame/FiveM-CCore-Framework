@@ -2,14 +2,13 @@ Config = {}
 
 Config.Language = 'french'
 
-Config.multiCharacter = true 
+--Config.multiCharacter = true 
 Config.copsWanted = true
+Config.enablePvP = true 
 
 Config.cashStartPlayer = 1000
 Config.bankStartPlayer = 500
 Config.dirtyStartPlayer = 0
-
-Config.enablePvP = false 
 
 --Config.showHUD = false 
 

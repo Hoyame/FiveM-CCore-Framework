@@ -6,17 +6,20 @@ function ShowAboveRadarMessage(msg, flash, saveToBrief, hudColorIndex)
 	EndTextCommandThefeedPostTicker(flash or false, saveToBrief)
 end
 
-RegisterNetEvent("corazon:ShowAboveRadarMessage")
-AddEventHandler("corazon:ShowAboveRadarMessage", ShowAboveRadarMessage)
-
 function ShowHelpNotification(msg)
 	AddTextEntry('zbiHelpNotification', msg)
 	BeginTextCommandDisplayHelp('zbiHelpNotification')
 	EndTextCommandDisplayHelp(0, false, true, -1)
 end
 
-RegisterNetEvent("corazon:ShowHelpNotification")
-AddEventHandler("corazon:ShowHelpNotification", ShowHelpNotification)
+function ShowAdvancedNotification(sender, subject, msg, textureDict, iconType, flash, saveToBrief, hudColorIndex)
+	if saveToBrief == nil then saveToBrief = true end
+	AddTextEntry('esxAdvancedNotification', msg)
+	BeginTextCommandThefeedPost('esxAdvancedNotification')
+	if hudColorIndex then ThefeedNextPostBackgroundColor(hudColorIndex) end
+	EndTextCommandThefeedPostMessagetext(textureDict, textureDict, false, iconType, sender, subject)
+	EndTextCommandThefeedPostTicker(flash or false, saveToBrief)
+end
 
 function LoadingPrompt(loadingText, spinnerType)
 
@@ -67,3 +70,34 @@ function createBlip(vectorPosX, vectorPosY, vectorPosZ, blipSprite, blipColor, b
 	return blip
 
 end
+
+function KeyboardInput(TextEntry, ExampleText, MaxStringLength)
+	AddTextEntry("FMMC_KEY_TIP1", TextEntry)
+	DisplayOnscreenKeyboard(1, "FMMC_KEY_TIP1", "", ExampleText, "", "", "", MaxStringLength)
+	blockinput = true
+
+	while UpdateOnscreenKeyboard() ~= 1 and UpdateOnscreenKeyboard() ~= 2 do
+		Citizen.Wait(0)
+	end
+
+	if UpdateOnscreenKeyboard() ~= 2 then
+		local result = GetOnscreenKeyboardResult()
+		Citizen.Wait(500)
+		blockinput = false
+		return result
+	else
+		Citizen.Wait(500)
+		blockinput = false
+		return nil
+	end
+end
+
+
+RegisterNetEvent("corazon:ShowAboveRadarMessage")
+AddEventHandler("corazon:ShowAboveRadarMessage", ShowAboveRadarMessage)
+
+RegisterNetEvent("corazon:ShowAdvancedNotification")
+AddEventHandler("corazon:ShowAdvancedNotification", ShowAdvancedNotification)
+
+RegisterNetEvent("corazon:ShowHelpNotification")
+AddEventHandler("corazon:ShowHelpNotification", ShowHelpNotification)
